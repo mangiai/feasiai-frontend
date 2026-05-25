@@ -17,7 +17,6 @@ export default function SuperAdminLoginPage() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const router = useRouter()
-  const supabase = createClient()
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -25,6 +24,7 @@ export default function SuperAdminLoginPage() {
     setLoading(true)
 
     try {
+      const supabase = createClient()
       const { data, error: authError } = await supabase.auth.signInWithPassword({
         email,
         password,
@@ -32,7 +32,6 @@ export default function SuperAdminLoginPage() {
       if (authError) throw authError
       if (!data.user) throw new Error('Authentication failed')
 
-      // Verify super_admin role
       const { data: profile, error: profileError } = await supabase
         .from('profiles')
         .select('system_role')
