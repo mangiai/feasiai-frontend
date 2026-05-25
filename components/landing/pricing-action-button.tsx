@@ -25,13 +25,13 @@ export function PricingActionButton({
   packageId,
 }: PricingActionButtonProps) {
   const router = useRouter()
-  const supabase = createClient()
   const [loading, setLoading] = useState(false)
 
   async function handleClick() {
     setLoading(true)
 
     try {
+      const supabase = createClient()
       const { data } = await supabase.auth.getSession()
       const intent = { subscribePlanId, packageId }
 
