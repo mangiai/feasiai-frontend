@@ -14,8 +14,6 @@ import {
   RocketIcon,
   Loader2Icon,
   CheckCircle2Icon,
-  ShieldCheckIcon,
-  HardHatIcon,
   BarChart3Icon,
   SearchIcon,
   AlertTriangleIcon,
@@ -245,20 +243,6 @@ interface FlowOption {
 
 const FLOW_OPTIONS: FlowOption[] = [
   {
-    id: 'city-review',
-    icon: ShieldCheckIcon,
-    title: 'City Plan Review',
-    description: 'Pre-screen a permit submission against state + city code before submittal.',
-    fileHint: 'Upload the plan binder PDF',
-  },
-  {
-    id: 'corrections-analysis',
-    icon: HardHatIcon,
-    title: 'Corrections Analysis',
-    description: 'Analyze a city corrections letter and build a professional response.',
-    fileHint: 'Upload plan binder + corrections letter',
-  },
-  {
     id: 'feasibility-analysis',
     icon: BarChart3Icon,
     title: 'Feasibility Analysis',
@@ -272,7 +256,7 @@ export default function NewProjectPage() {
   const { currentWorkspace } = useWorkspace()
 
   // Form state
-  const [flowType, setFlowType] = useState<FlowType | null>(null)
+  const [flowType, setFlowType] = useState<FlowType | null>('feasibility-analysis')
   const [projectName, setProjectName] = useState('')
   const _dev = process.env.NODE_ENV === 'development'
   const [city, setCity] = useState('')
@@ -1256,17 +1240,7 @@ export default function NewProjectPage() {
             </p>
           </div>
         </div>
-        <div className="space-y-3">
-          <p className="text-sm font-semibold text-foreground font-body">What do you need?</p>
-          <div className="grid gap-4 grid-cols-1 md:grid-cols-3">
-            {FLOW_OPTIONS.map((opt) => (
-              <div
-                key={opt.id}
-                className="rounded-xl border-2 border-border/50 p-5 h-[88px] bg-muted/5"
-              />
-            ))}
-          </div>
-        </div>
+        <div className="h-[88px] rounded-xl border-2 border-border/50 bg-muted/5 animate-pulse" />
       </div>
     )
   }
@@ -1310,54 +1284,7 @@ export default function NewProjectPage() {
         </div>
       </div>
 
-      {/* Flow Type Selection */}
-      <div className="space-y-3">
-        <Label className="text-sm font-semibold text-foreground font-body">
-          What do you need?
-        </Label>
-        <div className="grid gap-4 grid-cols-1 md:grid-cols-3">
-          {FLOW_OPTIONS.map((opt) => {
-            const Icon = opt.icon
-            const selected = flowType === opt.id
-            return (
-              <button
-                key={opt.id}
-                type="button"
-                onClick={() => setFlowType(opt.id)}
-                disabled={step !== 'configure'}
-                className={cn(
-                  'text-left rounded-xl border-2 p-5 transition-all',
-                  selected
-                    ? 'border-primary bg-primary/5 shadow-[0_0_20px_rgba(45,106,79,0.1)]'
-                    : 'border-border/50 hover:border-primary/30 hover:bg-muted/30',
-                )}
-              >
-                <div className="flex items-start gap-4">
-                  <div
-                    className={cn(
-                      'w-10 h-10 rounded-lg flex items-center justify-center shrink-0',
-                      selected ? 'bg-primary/20' : 'bg-muted',
-                    )}
-                  >
-                    <Icon
-                      className={cn(
-                        'w-5 h-5',
-                        selected ? 'text-primary' : 'text-muted-foreground',
-                      )}
-                    />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-foreground font-body">{opt.title}</p>
-                    <p className="text-sm text-muted-foreground font-body mt-1 leading-relaxed">
-                      {opt.description}
-                    </p>
-                  </div>
-                </div>
-              </button>
-            )
-          })}
-        </div>
-      </div>
+      {/* Flow type is auto-selected to feasibility-analysis */}
 
       {isFeasibility && step === 'configure' && (
         <FeasibilityWizardProgress step={feasibilityStep} />
