@@ -208,7 +208,7 @@ export function SectionTag({ children }: { children: React.ReactNode }) {
       transition={{ duration: 0.4 }}
       className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-foreground/10 bg-foreground/[0.04] backdrop-blur-sm text-xs font-medium tracking-widest uppercase text-foreground/50 mb-6"
     >
-      <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
+      <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
       {children}
     </motion.div>
   )

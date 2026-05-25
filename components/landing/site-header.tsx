@@ -103,7 +103,7 @@ export function SiteHeader({ forceReadable = false }: { forceReadable?: boolean 
           <Link href="/pricing">
             <Button
               size="sm"
-              className="font-semibold bg-secondary hover:bg-secondary/90 text-white shadow-[0_0_20px_rgba(245,130,32,0.25)] hover:shadow-[0_0_32px_rgba(245,130,32,0.4)] transition-all text-[13px] hover:scale-105 active:scale-95"
+              className="font-semibold bg-primary hover:bg-primary/90 text-white shadow-[0_0_20px_rgba(16,185,129,0.25)] hover:shadow-[0_0_32px_rgba(16,185,129,0.4)] transition-all text-[13px] hover:scale-105 active:scale-95"
             >
               View Pricing
               <ArrowRightIcon className="w-3.5 h-3.5 ml-1" />

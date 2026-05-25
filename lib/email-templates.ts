@@ -11,8 +11,8 @@ function escapeHtml(str: string): string {
 }
 
 // Marketing-site palette (email-safe approximations)
-const BRAND_ORANGE = '#F58220' // --secondary
-const BRAND_NAVY = '#1B2A5F' // --primary
+const BRAND_GOLD = '#EAB308' // --secondary
+const BRAND_EMERALD = '#059669' // --primary
 
 // Dark, "landing page vibes" shell
 const PAGE_BG = '#070A12'
@@ -53,7 +53,7 @@ function layout(title: string, preheader: string, body: string) {
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;border:1px solid ${CARD_BORDER};border-radius:16px;overflow:hidden;background-color:${CARD_BG};box-shadow:0 18px 60px rgba(0,0,0,0.45);">
           <tr>
             <td style="padding:0;">
-              <div style="height:6px;line-height:6px;background:linear-gradient(90deg, ${BRAND_ORANGE} 0%, #ffb055 30%, #8b5cf6 100%);"></div>
+              <div style="height:6px;line-height:6px;background:linear-gradient(90deg, ${BRAND_EMERALD} 0%, #34d399 30%, #8b5cf6 100%);"></div>
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
                 <tr>
                   <td style="padding:22px 32px 18px 32px;">
@@ -95,8 +95,8 @@ function ctaButton(text: string, url: string) {
   return `
   <table role="presentation" cellpadding="0" cellspacing="0" style="margin:28px 0 8px;">
     <tr>
-      <td align="center" bgcolor="${BRAND_ORANGE}" style="border-radius:12px;background-color:${BRAND_ORANGE};">
-        <a href="${url}" style="display:inline-block;padding:14px 28px;background-color:${BRAND_ORANGE};color:#0B1220;font-size:14px;font-weight:800;text-decoration:none;border-radius:12px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+      <td align="center" bgcolor="${BRAND_EMERALD}" style="border-radius:12px;background-color:${BRAND_EMERALD};">
+        <a href="${url}" style="display:inline-block;padding:14px 28px;background-color:${BRAND_EMERALD};color:#FFFFFF;font-size:14px;font-weight:800;text-decoration:none;border-radius:12px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
           ${escapeHtml(text)}
         </a>
       </td>

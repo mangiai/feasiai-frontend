@@ -265,11 +265,11 @@ function SignalCard({ icon: Icon, label, value, note }: SectionSignal) {
     <Card
       className={cn(
         surfaceCardClassName,
-        'shadow-[0_24px_80px_-56px_rgba(245,158,11,0.18)] dark:shadow-[0_28px_110px_-72px_rgba(245,158,11,0.22)]'
+        'shadow-[0_24px_80px_-56px_rgba(5,150,105,0.18)] dark:shadow-[0_28px_110px_-72px_rgba(5,150,105,0.22)]'
       )}
     >
       <CardContent className="flex h-full flex-col gap-4 py-5">
-        <div className="flex size-10 items-center justify-center rounded-2xl border border-secondary/20 bg-secondary/10 text-secondary">
+        <div className="flex size-10 items-center justify-center rounded-2xl border border-primary/20 bg-primary/10 text-primary">
           <Icon className="size-4" />
         </div>
         <div className="space-y-2">
@@ -292,7 +292,7 @@ export default function PricingPage() {
       <main className="relative overflow-hidden bg-grid-pattern">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/35 to-background dark:via-background/95" />
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border/80 to-transparent" />
-        <div className="absolute left-[-4rem] top-16 h-72 w-72 rounded-full bg-secondary/12 blur-3xl dark:bg-secondary/10" />
+        <div className="absolute left-[-4rem] top-16 h-72 w-72 rounded-full bg-primary/12 blur-3xl dark:bg-primary/10" />
         <div className="absolute right-[-2rem] top-24 h-80 w-80 rounded-full bg-info/12 blur-3xl dark:bg-info/10" />
 
         <section className="relative mx-auto max-w-7xl px-4 pb-14 pt-28 sm:px-6 lg:px-8 lg:pb-20">
@@ -319,7 +319,7 @@ export default function PricingPage() {
                   Access plan + credits, no seat bloat
                 </div>
                 <div className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-background/70 px-4 py-2 backdrop-blur-sm dark:bg-card/50">
-                  <SparklesIcon className="size-4 text-secondary" />
+                  <SparklesIcon className="size-4 text-primary" />
                   Standard and strategy deliverables
                 </div>
               </div>
@@ -329,11 +329,11 @@ export default function PricingPage() {
               <Card
                 className={cn(
                   surfaceCardClassName,
-                  'shadow-[0_32px_140px_-72px_rgba(245,130,32,0.22)] dark:shadow-[0_32px_140px_-72px_rgba(245,130,32,0.28)]'
+                  'shadow-[0_32px_140px_-72px_rgba(5,150,105,0.22)] dark:shadow-[0_32px_140px_-72px_rgba(5,150,105,0.28)]'
                 )}
               >
                 <CardHeader className="space-y-3">
-                  <Badge className="w-fit rounded-full border border-secondary/20 bg-secondary/10 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-secondary">
+                  <Badge className="w-fit rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-primary">
                     How billing works
                   </Badge>
                   <CardTitle className="text-2xl font-semibold tracking-[-0.03em] text-foreground">
@@ -355,7 +355,7 @@ export default function PricingPage() {
                       >
                         <div className="flex items-center gap-3 sm:block">
                           <div className="flex size-11 items-center justify-center rounded-2xl border border-border/60 bg-accent/50 text-foreground dark:bg-background/60">
-                            <Icon className="size-4 text-secondary" />
+                            <Icon className="size-4 text-primary" />
                           </div>
                           <span className="text-[11px] font-medium uppercase tracking-[0.2em] text-muted-foreground/70 sm:mt-3 sm:block">
                             Step {index + 1}
@@ -403,7 +403,7 @@ export default function PricingPage() {
                   className={cn(
                     surfaceCardClassName,
                     plan.popular &&
-                      'border-secondary/40 shadow-[0_36px_140px_-80px_rgba(245,130,32,0.24)] dark:shadow-[0_36px_140px_-72px_rgba(245,130,32,0.32)]'
+                      'border-primary/40 shadow-[0_36px_140px_-80px_rgba(5,150,105,0.24)] dark:shadow-[0_36px_140px_-72px_rgba(5,150,105,0.32)]'
                   )}
                 >
                   <CardHeader className="space-y-4">
@@ -423,7 +423,7 @@ export default function PricingPage() {
                       </div>
 
                       {plan.popular ? (
-                        <Badge className="rounded-full border border-secondary/20 bg-secondary/10 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-secondary">
+                        <Badge className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-primary">
                           Recommended
                         </Badge>
                       ) : null}
@@ -512,8 +512,8 @@ export default function PricingPage() {
                     className={cn(
                       surfaceCardClassName,
                       deliverable.tone === 'strategy'
-                        ? 'shadow-[0_34px_130px_-76px_rgba(59,130,246,0.22)] dark:shadow-[0_34px_130px_-76px_rgba(59,130,246,0.28)]'
-                        : 'shadow-[0_34px_130px_-76px_rgba(245,130,32,0.2)] dark:shadow-[0_34px_130px_-76px_rgba(245,130,32,0.26)]'
+                        ? 'shadow-[0_34px_130px_-76px_rgba(139,92,246,0.22)] dark:shadow-[0_34px_130px_-76px_rgba(139,92,246,0.28)]'
+                        : 'shadow-[0_34px_130px_-76px_rgba(5,150,105,0.2)] dark:shadow-[0_34px_130px_-76px_rgba(5,150,105,0.26)]'
                     )}
                   >
                     <CardHeader className="space-y-4">
@@ -524,7 +524,7 @@ export default function PricingPage() {
                               'flex size-11 items-center justify-center rounded-2xl border',
                               deliverable.tone === 'strategy'
                                 ? 'border-info/20 bg-info/10 text-info'
-                                : 'border-secondary/20 bg-secondary/10 text-secondary'
+                                : 'border-primary/20 bg-primary/10 text-primary'
                             )}
                           >
                             <Icon className="size-4" />
@@ -596,7 +596,7 @@ export default function PricingPage() {
                   className={cn(
                     surfaceCardClassName,
                     pkg.popular &&
-                      'border-info/35 shadow-[0_34px_140px_-72px_rgba(59,130,246,0.22)] dark:shadow-[0_34px_140px_-72px_rgba(59,130,246,0.28)]'
+                      'border-info/35 shadow-[0_34px_140px_-72px_rgba(139,92,246,0.22)] dark:shadow-[0_34px_140px_-72px_rgba(139,92,246,0.28)]'
                   )}
                 >
                   <CardHeader className="space-y-4">
@@ -678,7 +678,7 @@ export default function PricingPage() {
           <ScrollReveal>
             <Card className={cn(surfaceCardClassName, 'relative overflow-hidden')}>
               <div className="absolute -right-10 top-0 h-36 w-36 rounded-full bg-info/14 blur-3xl dark:bg-info/12" />
-              <div className="absolute -left-10 bottom-0 h-36 w-36 rounded-full bg-secondary/14 blur-3xl dark:bg-secondary/12" />
+              <div className="absolute -left-10 bottom-0 h-36 w-36 rounded-full bg-primary/14 blur-3xl dark:bg-primary/12" />
 
               <CardContent className="relative flex flex-col gap-8 py-8 md:py-10 lg:flex-row lg:items-center lg:justify-between">
                 <div className="max-w-3xl space-y-4">

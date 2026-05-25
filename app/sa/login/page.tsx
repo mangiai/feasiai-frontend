@@ -71,11 +71,11 @@ export default function SuperAdminLoginPage() {
       <Card className="relative z-10 w-full max-w-[400px] shadow-elevated border-border/50 animate-fade-up overflow-hidden">
         {/* Branded header strip */}
         <div className="relative px-6 pt-8 pb-6 bg-gradient-to-b from-primary/8 to-transparent">
-          <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-secondary to-primary" />
+          <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-emerald-600 via-emerald-400 to-emerald-600" />
           <div className="text-center space-y-4">
             <div className="flex justify-center">
               <div className="relative">
-                <div className="absolute -inset-3 rounded-full bg-secondary/10 blur-lg" />
+                <div className="absolute -inset-3 rounded-full bg-primary/10 blur-lg" />
                 <Image
                   src="/images/feasiai-icon.svg"
                   alt="FeasiAI"
@@ -87,7 +87,7 @@ export default function SuperAdminLoginPage() {
             </div>
             <div>
               <div className="flex items-center justify-center gap-2 mb-1">
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-secondary">
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
                   Admin Portal
                 </span>
               </div>
@@ -146,7 +146,7 @@ export default function SuperAdminLoginPage() {
             <Button
               type="submit"
               disabled={loading}
-              className="w-full font-semibold mt-1 bg-secondary hover:bg-secondary/90 text-secondary-foreground"
+              className="w-full font-semibold mt-1 bg-primary hover:bg-primary/90 text-primary-foreground"
               size="lg"
             >
               {loading ? (

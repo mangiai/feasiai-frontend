@@ -100,8 +100,8 @@ export default function HomePage() {
             className="absolute w-[800px] h-[800px] rounded-full blur-3xl opacity-50"
             style={{
               background: isDark
-                ? 'radial-gradient(circle, rgba(245,130,32,0.15) 0%, transparent 60%)'
-                : 'radial-gradient(circle, rgba(245,130,32,0.1) 0%, transparent 60%)',
+                ? 'radial-gradient(circle, rgba(5,150,105,0.15) 0%, transparent 60%)'
+                : 'radial-gradient(circle, rgba(5,150,105,0.1) 0%, transparent 60%)',
               top: '-10%', left: '-10%',
             }}
             animate={{ x: [0, 40, 0], y: [0, -30, 0], scale: [1, 1.05, 1] }}
@@ -138,10 +138,10 @@ export default function HomePage() {
             <motion.div variants={fadeUp}>
               <Badge
                 variant="outline"
-                className="mb-6 py-1.5 px-4 border-secondary/20 bg-secondary/[0.06] text-secondary text-xs font-medium tracking-wide"
+                className="mb-6 py-1.5 px-4 border-emerald-500/20 bg-emerald-500/[0.06] text-emerald-500 dark:text-emerald-400 text-xs font-medium tracking-wide"
               >
                 <SparklesIcon className="w-3 h-3 mr-1.5" />
-                AI-Powered Permit Intelligence
+                AI-Powered Feasibility Intelligence
               </Badge>
             </motion.div>
 
@@ -149,10 +149,10 @@ export default function HomePage() {
               variants={fadeUp}
               className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-foreground tracking-tight leading-[1.05]"
             >
-              Your permits.
+              Feasibility intelligence
               <br />
-              <span className="bg-gradient-to-r from-secondary via-amber-400 to-violet-400 bg-clip-text text-transparent">
-                Weeks faster.
+              <span className="bg-gradient-to-r from-emerald-400 via-emerald-300 to-violet-400 bg-clip-text text-transparent">
+                that moves at your speed.
               </span>
             </motion.h1>
 
@@ -160,10 +160,10 @@ export default function HomePage() {
               variants={fadeUp}
               className="text-lg sm:text-xl text-foreground/50 max-w-2xl mx-auto mt-6 leading-relaxed"
             >
-              From <strong className="text-foreground/70">feasibility analysis</strong> to{' '}
-              <strong className="text-foreground/70">corrections response</strong>,{' '}
-              <strong className="text-foreground/70">plan review</strong> to{' '}
-              <strong className="text-foreground/70">permit creation</strong> — powered by specialized AI agents
+              AI-powered <strong className="text-foreground/70">land development feasibility analysis</strong> —
+              from <strong className="text-foreground/70">zoning &amp; entitlements</strong> to{' '}
+              <strong className="text-foreground/70">corrections response</strong> and{' '}
+              <strong className="text-foreground/70">permit creation</strong>. Specialized AI agents
               that know California housing code inside and out.
             </motion.p>
 
@@ -184,7 +184,7 @@ export default function HomePage() {
                 <Link href="/feasibility">
                   <Button
                     size="lg"
-                    className="w-full sm:w-auto px-10 py-6 text-base font-semibold bg-secondary hover:bg-secondary/90 text-white shadow-[0_0_40px_rgba(245,130,32,0.3)] hover:shadow-[0_0_60px_rgba(245,130,32,0.5)] transition-all duration-300 rounded-xl"
+                    className="w-full sm:w-auto px-10 py-6 text-base font-semibold bg-emerald-600 hover:bg-emerald-500 text-white shadow-[0_0_40px_rgba(5,150,105,0.3)] hover:shadow-[0_0_60px_rgba(5,150,105,0.5)] transition-all duration-300 rounded-xl"
                   >
                     Feasibility Analysis
                     <ArrowRightIcon className="w-4 h-4 ml-2" />
@@ -247,7 +247,7 @@ export default function HomePage() {
           <SectionTag>Two Platforms</SectionTag>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground tracking-tight leading-[1.1]">
             One system.{' '}
-            <span className="text-secondary">Every workflow.</span>
+            <span className="text-emerald-600 dark:text-emerald-400">Every workflow.</span>
           </h2>
           <p className="text-foreground/50 text-base max-w-2xl mx-auto mt-4 leading-relaxed">
             Whether you need to know what you <em>can</em> build or you need to fix what you&apos;ve <em>already</em> submitted —
@@ -308,12 +308,12 @@ export default function HomePage() {
             <motion.div variants={fadeUp}>
               <TiltCard className="h-full">
                 <Link href="/adu" className="block group h-full">
-                  <div className="relative rounded-2xl border border-secondary/20 bg-foreground/[0.04] hover:bg-foreground/[0.07] hover:border-secondary/30 transition-all duration-500 h-full overflow-hidden shadow-lg hover:shadow-secondary/10">
-                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" style={{ background: 'radial-gradient(ellipse at 30% 20%, rgba(245,130,32,0.06) 0%, transparent 60%)' }} />
+                  <div className="relative rounded-2xl border border-emerald-500/20 bg-foreground/[0.04] hover:bg-foreground/[0.07] hover:border-emerald-500/30 transition-all duration-500 h-full overflow-hidden shadow-lg hover:shadow-emerald-500/10">
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" style={{ background: 'radial-gradient(ellipse at 30% 20%, rgba(5,150,105,0.06) 0%, transparent 60%)' }} />
                     <div className="relative p-8 sm:p-10">
                       <div className="flex items-center gap-3 mb-6">
-                        <div className="w-12 h-12 rounded-xl bg-secondary/15 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                          <FileTextIcon className="w-6 h-6 text-secondary" />
+                        <div className="w-12 h-12 rounded-xl bg-emerald-500/15 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          <FileTextIcon className="w-6 h-6 text-emerald-400" />
                         </div>
                         <div>
                           <h3 className="text-xl font-bold text-foreground tracking-tight">ADU Permit Review</h3>
@@ -328,14 +328,14 @@ export default function HomePage() {
 
                       <div className="flex flex-wrap gap-1.5 mb-6">
                         {['Corrections Response', 'Plan Review', 'City Code Research', 'Response Letters', '7,400px Vision', '480+ Cities'].map(tag => (
-                          <span key={tag} className="inline-flex items-center gap-1 text-[11px] font-medium text-secondary/70 px-2 py-0.5 rounded-md border border-secondary/15 bg-secondary/[0.06]">
+                          <span key={tag} className="inline-flex items-center gap-1 text-[11px] font-medium text-emerald-300/70 px-2 py-0.5 rounded-md border border-emerald-500/15 bg-emerald-500/[0.06]">
                             <CheckIcon className="w-2.5 h-2.5" />
                             {tag}
                           </span>
                         ))}
                       </div>
 
-                      <div className="inline-flex items-center gap-2 text-sm font-semibold text-secondary group-hover:text-secondary/80 transition-colors">
+                      <div className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-400 group-hover:text-emerald-300 transition-colors">
                         Explore ADU Permits
                         <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </div>
@@ -356,7 +356,7 @@ export default function HomePage() {
             <SectionTag>Four Workflows</SectionTag>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground tracking-tight leading-[1.1]">
               Powered by{' '}
-              <span className="text-secondary">specialized AI agents</span>
+              <span className="text-emerald-600 dark:text-emerald-400">specialized AI agents</span>
             </h2>
           </ScrollReveal>
 
@@ -370,40 +370,40 @@ export default function HomePage() {
             {[
               {
                 icon: ScaleIcon,
-                color: 'violet',
+                color: 'emerald',
                 title: 'Feasibility Analysis',
                 desc: '11 entitlement strategies evaluated simultaneously. CHIP, TOC, density bonus, FAR, parking, setbacks — one address in, 20-page report out.',
                 href: '/feasibility',
               },
               {
                 icon: FileTextIcon,
-                color: 'secondary',
+                color: 'gold',
                 title: 'Corrections Response',
                 desc: 'Upload a corrections letter and plans. AI parses every item, cites exact code sections, and generates a professional response letter.',
                 href: '/adu',
               },
               {
                 icon: SearchIcon,
-                color: 'blue',
+                color: 'violet',
                 title: 'City Plan Review',
                 desc: 'Pre-screen plans against state + city code. Catch compliance issues sheet-by-sheet before you submit to the building department.',
                 href: '/adu',
               },
               {
                 icon: PenToolIcon,
-                color: 'emerald',
+                color: 'emeraldLight',
                 title: 'Permit Set Creation',
                 desc: 'AI-assisted generation of permit-ready document sets. Title 24, structural details — assembled and formatted for city submission.',
                 href: '/adu',
               },
             ].map(item => {
               const colorMap: Record<string, { bg: string; text: string; border: string; glow: string }> = {
+                emerald: { bg: 'bg-emerald-500/15', text: 'text-emerald-400', border: 'group-hover:border-emerald-500/25', glow: 'rgba(5,150,105,0.06)' },
+                gold: { bg: 'bg-yellow-500/15', text: 'text-yellow-500 dark:text-yellow-400', border: 'group-hover:border-yellow-500/25', glow: 'rgba(234,179,8,0.06)' },
                 violet: { bg: 'bg-violet-500/15', text: 'text-violet-400', border: 'group-hover:border-violet-500/25', glow: 'rgba(139,92,246,0.06)' },
-                secondary: { bg: 'bg-secondary/15', text: 'text-secondary', border: 'group-hover:border-secondary/25', glow: 'rgba(245,130,32,0.06)' },
-                blue: { bg: 'bg-blue-500/15', text: 'text-blue-400', border: 'group-hover:border-blue-500/25', glow: 'rgba(59,130,246,0.06)' },
-                emerald: { bg: 'bg-emerald-500/15', text: 'text-emerald-400', border: 'group-hover:border-emerald-500/25', glow: 'rgba(16,185,129,0.06)' },
+                emeraldLight: { bg: 'bg-emerald-500/10', text: 'text-emerald-300', border: 'group-hover:border-emerald-400/25', glow: 'rgba(16,185,129,0.06)' },
               }
-              const c = colorMap[item.color] || colorMap.secondary
+              const c = colorMap[item.color] || colorMap.emerald
               return (
                 <motion.div key={item.title} variants={fadeUp}>
                   <TiltCard className="h-full">
@@ -430,14 +430,14 @@ export default function HomePage() {
       {/* ══════════════════ WHY THIS WORKS ══════════════════ */}
       <section className="relative z-10 py-28 sm:py-36 overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-foreground/[0.08] to-transparent" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50vw] h-[50vw] rounded-full opacity-[0.06]" style={{ background: `radial-gradient(circle, ${isDark ? 'rgba(245,130,32,0.6)' : 'rgba(245,130,32,0.3)'} 0%, transparent 60%)` }} aria-hidden="true" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50vw] h-[50vw] rounded-full opacity-[0.06]" style={{ background: `radial-gradient(circle, ${isDark ? 'rgba(5,150,105,0.6)' : 'rgba(5,150,105,0.3)'} 0%, transparent 60%)` }} aria-hidden="true" />
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
           <ScrollReveal className="text-center mb-16">
             <SectionTag>Our Approach</SectionTag>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground tracking-tight leading-[1.1]">
               Why this{' '}
-              <span className="text-secondary">actually works</span>
+              <span className="text-emerald-600 dark:text-emerald-400">actually works</span>
             </h2>
             <p className="text-foreground/50 text-base max-w-2xl mx-auto mt-4 leading-relaxed">
               Most AI tools give you a chatbot. We built a multi-agent system that replicates how the best permit consultants think — with every California code baked in.
@@ -462,8 +462,8 @@ export default function HomePage() {
               <motion.div key={item.title} variants={fadeUp}>
                 <TiltCard className="h-full">
                   <div className="group rounded-2xl border border-foreground/[0.10] bg-foreground/[0.04] p-6 hover:bg-foreground/[0.07] hover:border-foreground/[0.16] transition-all duration-500 h-full shadow-sm hover:shadow-md">
-                    <div className="w-10 h-10 rounded-xl bg-foreground/[0.06] border border-foreground/[0.10] flex items-center justify-center mb-4 group-hover:bg-secondary/10 group-hover:border-secondary/20 transition-colors duration-300">
-                      <item.icon className="w-[18px] h-[18px] text-foreground/60 group-hover:text-secondary transition-colors duration-300" />
+                    <div className="w-10 h-10 rounded-xl bg-foreground/[0.06] border border-foreground/[0.10] flex items-center justify-center mb-4 group-hover:bg-emerald-500/10 group-hover:border-emerald-500/20 transition-colors duration-300">
+                      <item.icon className="w-[18px] h-[18px] text-foreground/60 group-hover:text-emerald-400 transition-colors duration-300" />
                     </div>
                     <h3 className="text-[15px] font-semibold text-foreground tracking-tight mb-2">{item.title}</h3>
                     <p className="text-[13px] text-foreground/50 leading-relaxed">{item.desc}</p>
@@ -484,7 +484,7 @@ export default function HomePage() {
             <SectionTag>Under the Hood</SectionTag>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground tracking-tight leading-[1.1]">
               Built for{' '}
-              <span className="text-secondary">production</span>
+              <span className="text-emerald-600 dark:text-emerald-400">production</span>
             </h2>
           </ScrollReveal>
 
@@ -505,7 +505,7 @@ export default function HomePage() {
                 <div className="group relative rounded-2xl border border-foreground/[0.10] bg-foreground/[0.04] p-5 sm:p-6 hover:bg-foreground/[0.07] hover:border-foreground/[0.18] transition-all duration-500 h-full overflow-hidden">
                   <span className="absolute -top-2 -right-1 text-[4rem] font-black text-foreground/[0.04] select-none leading-none group-hover:text-foreground/[0.07] transition-colors duration-500">{item.num}</span>
                   <div className="relative">
-                    <item.icon className="w-5 h-5 text-secondary/70 mb-3" />
+                    <item.icon className="w-5 h-5 text-emerald-500/70 mb-3" />
                     <h3 className="font-semibold text-sm text-foreground mb-1">{item.title}</h3>
                     <p className="text-xs text-foreground/50 leading-relaxed">{item.desc}</p>
                   </div>
@@ -548,7 +548,7 @@ export default function HomePage() {
                       </span>
                     ))}
                   </div>
-                  <a href="https://feasiai.com/services/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm font-medium text-secondary hover:text-secondary/80 transition-colors group/link">
+                  <a href="https://feasiai.com/services/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm font-medium text-emerald-600 hover:text-emerald-500 dark:text-emerald-400 dark:hover:text-emerald-300 transition-colors group/link">
                     Explore Our Services
                     <ArrowRightIcon className="w-3.5 h-3.5 group-hover/link:translate-x-0.5 transition-transform" />
                   </a>
@@ -560,7 +560,7 @@ export default function HomePage() {
                     { num: '2018', label: 'Helping developers navigate zoning & city processes' },
                   ].map(stat => (
                     <div key={stat.num} className="flex flex-col">
-                      <span className="text-3xl font-extrabold text-secondary tracking-tight">{stat.num}</span>
+                      <span className="text-3xl font-extrabold text-emerald-600 dark:text-emerald-400 tracking-tight">{stat.num}</span>
                       <span className="text-[13px] text-foreground/50 mt-1">{stat.label}</span>
                     </div>
                   ))}
@@ -578,7 +578,7 @@ export default function HomePage() {
         <div className="absolute inset-0 flex items-center justify-center" aria-hidden="true">
           <motion.div
             className="w-[50vw] h-[50vw] rounded-full"
-            style={{ background: `radial-gradient(circle, ${isDark ? 'rgba(245,130,32,0.12)' : 'rgba(245,130,32,0.06)'} 0%, transparent 60%)` }}
+            style={{ background: `radial-gradient(circle, ${isDark ? 'rgba(5,150,105,0.12)' : 'rgba(5,150,105,0.06)'} 0%, transparent 60%)` }}
             animate={{ scale: [1, 1.05, 1] }}
             transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
           />
@@ -600,7 +600,7 @@ export default function HomePage() {
                 <Link href="/pricing">
                   <Button
                     size="lg"
-                    className="w-full sm:w-auto px-10 py-6 text-base font-semibold bg-secondary hover:bg-secondary/90 text-white shadow-[0_0_40px_rgba(245,130,32,0.3)] hover:shadow-[0_0_60px_rgba(245,130,32,0.5)] transition-all duration-300 rounded-xl"
+                    className="w-full sm:w-auto px-10 py-6 text-base font-semibold bg-emerald-600 hover:bg-emerald-500 text-white shadow-[0_0_40px_rgba(5,150,105,0.3)] hover:shadow-[0_0_60px_rgba(5,150,105,0.5)] transition-all duration-300 rounded-xl"
                   >
                     See Pricing & Plans
                     <ArrowRightIcon className="w-4 h-4 ml-2" />
